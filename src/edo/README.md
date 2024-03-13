@@ -142,10 +142,7 @@ A primeira categoria de integradores simpléticos
 servem para resolver numericamente equações do tipo
 
 $$
-\frac{d}{dt}
-\begin{bmatrix} x(t) \\ y(t) \end{bmatrix}
-=
-\begin{bmatrix} f(y(t)) \\ g(x(t)) \end{bmatrix}
+\frac{d}{dt} (x(t), y(t)) = (f(y(t)), g(x(t)))
 $$
 
 onde $f_i(y) = \frac{\partial}{\partial y_i}\mathcal{H_0}(y)$
