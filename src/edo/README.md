@@ -83,7 +83,7 @@ uma função cujo o nome o usuário pode escolher mas que deve ser do tipo
 `EDO_CORPUS (*)(size_t i, double t, EDO_CORPUS *x);`. Por exemplo,
 se quer-se que o nome da função seja `f` então pode-se usar o prototipo abaixo.
 
-```
+```c
 EDO_CORPUS f(size_t i, double t, EDO_CORPUS *x);
 ```
 
@@ -92,12 +92,12 @@ implementada utilizando macro. Apenas o seu nome será informado à biblioteca.
 
 Um método de integração numérica da equação diferencial ordinária
 (1) é uma função
-$\Phi^{\text{M\'ETODO}}_{h}:\mathcal{V}\rightarrow\mathcal{V}$
+$\Phi^{\text{METODO}}_{h}:\mathcal{V}\rightarrow\mathcal{V}$
 que aproxima a solução exata conforme $h$ se torna cada vez menor,
 isto é,
 
 $$
-\lim_{h\to 0} \Phi^{\text{M\'ETODO}}_{h}(x_0) - \Phi(h, x_0) = 0.
+\lim_{h\to 0} \Phi^{\text{METODO}}_{h}(x_0) - \Phi(h, x_0) = 0.
 $$
 
 Por fim, antes de chamar algum método é necessário informar à biblioteca
@@ -140,12 +140,14 @@ $\Phi(t, z_0) = (x(t), y(t))$, com $(x(0), y(0)) = \Phi(0, z_0)$.
 
 A primeira categoria de integradores simpléticos
 servem para resolver numericamente equações do tipo
+
 $$
 \frac{d}{dt}
 \begin{bmatrix} x(t) \\ y(t) \end{bmatrix}
 =
 \begin{bmatrix} f(y(t)) \\ g(x(t)) \end{bmatrix}
 $$
+
 onde $f_i(y) = \frac{\partial}{\partial y_i}\mathcal{H_0}(y)$
 e $g_i(x) = -\frac{\partial}{\partial x_i}\mathcal{H_1}(x)$.
 A função
