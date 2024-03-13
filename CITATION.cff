@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+authors:
+- family-names: "DOS SANTOS"
+  given-names: "I.F.F."
+  orcid: "https://orcid.org/0000-0002-6652-9295"
+title: "libism"
+version: 1.0.0
+date-released: 2024-03-13
+url: "https://github.com/ismaeldamiao/libism"
