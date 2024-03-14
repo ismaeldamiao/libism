@@ -37,6 +37,8 @@ Métodos previsor-corretor:
 Métodos simpléticos:
 - [x] Euler semi-implícito: `EULER_S`
 - [x] Störmer-Verlet: `VERLET`
+- [x] Ruth de terceira ordem: `RUTH3`
+- [x] Ruth de quarta ordem: `RUTH4`
 
 ## Teoria
 
