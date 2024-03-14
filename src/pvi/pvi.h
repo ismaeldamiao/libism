@@ -1014,7 +1014,7 @@ static double pvi_h = 0.1, pvi_finalis = 1.0;
 {\
    size_t pvi_index;\
    double pvi_hh[6]; \
-   pvi_hh[0] = pvi_h * (7.0 / 74.0);\
+   pvi_hh[0] = pvi_h * (7.0 / 24.0);\
    pvi_hh[1] = pvi_h * (2.0 / 3.0);\
    pvi_hh[2] = pvi_h * 0.75;\
    pvi_hh[3] = pvi_h * (-2.0 / 3.0);\
@@ -1034,6 +1034,37 @@ static double pvi_h = 0.1, pvi_finalis = 1.0;
          (Y)[pvi_index] += Y_punctum(pvi_index, X) * pvi_hh[4];\
       for(pvi_index = (size_t)0; pvi_index < pvi_dimensio; ++pvi_index)\
          (X)[pvi_index] += X_punctum(pvi_index, Y) * pvi_hh[5];\
+      t += pvi_h;\
+      PVI_FAC_ALIQUID();\
+   }\
+}
+
+#define PVI_RAIZ_CUBICA_2 1.25992104989
+
+#define PVI_INTEGRATOR_RUTH4(t, X, Y, X_punctum, Y_punctum) \
+{\
+   size_t pvi_index;\
+   double pvi_hh[4]; \
+   pvi_hh[0] = pvi_h * (0.5 / (2.0 - PVI_RAIZ_CUBICA_2));\
+   pvi_hh[1] = pvi_h * (1.0 / (2.0 - PVI_RAIZ_CUBICA_2));\
+   pvi_hh[2] = pvi_h * ((1.0 - PVI_RAIZ_CUBICA_2) * 0.5 / (2.0 - PVI_RAIZ_CUBICA_2));\
+   pvi_hh[3] = pvi_h * (-PVI_RAIZ_CUBICA_2 / (2.0 - PVI_RAIZ_CUBICA_2));\
+\
+   while(t < pvi_finalis){\
+      for(pvi_index = (size_t)0; pvi_index < pvi_dimensio; ++pvi_index)\
+         (X)[pvi_index] += X_punctum(pvi_index, Y) * pvi_hh[0];\
+      for(pvi_index = (size_t)0; pvi_index < pvi_dimensio; ++pvi_index)\
+         (Y)[pvi_index] += Y_punctum(pvi_index, X) * pvi_hh[1];\
+      for(pvi_index = (size_t)0; pvi_index < pvi_dimensio; ++pvi_index)\
+         (X)[pvi_index] += X_punctum(pvi_index, Y) * pvi_hh[2];\
+      for(pvi_index = (size_t)0; pvi_index < pvi_dimensio; ++pvi_index)\
+         (Y)[pvi_index] += Y_punctum(pvi_index, X) * pvi_hh[3];\
+      for(pvi_index = (size_t)0; pvi_index < pvi_dimensio; ++pvi_index)\
+         (X)[pvi_index] += X_punctum(pvi_index, Y) * pvi_hh[2];\
+      for(pvi_index = (size_t)0; pvi_index < pvi_dimensio; ++pvi_index)\
+         (Y)[pvi_index] += Y_punctum(pvi_index, X) * pvi_hh[1];\
+      for(pvi_index = (size_t)0; pvi_index < pvi_dimensio; ++pvi_index)\
+         (X)[pvi_index] += X_punctum(pvi_index, Y) * pvi_hh[0];\
       t += pvi_h;\
       PVI_FAC_ALIQUID();\
    }\
