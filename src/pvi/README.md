@@ -1,8 +1,9 @@
-# PVI
+# Problema Valoris Inicialis
 
-A biblioteca PVI
+*Problema Valoris Inicialis*, ou simplesmente PVI,
+é uma biblioteca que
 oferece diversas rotinas implementadas na forma de macros para
-resolver numericamente o **p**roblema de **v**alor **i**nicial.
+resolver numericamente o problema de valor inicial.
 
 Última modificação: 14 de março de 2024.
 
@@ -102,7 +103,7 @@ Um integrador é simplético se também for um simplectomorfismo.
   ```
 * Defina também a dimensão $d$ do espaço de estados, como abaixo.
   ```c
-  pvi_dimentio = /* valor size_t */;
+  pvi_dimensio = /* valor size_t */;
   ```
   Note que a no caso simplético o valor informado DEVE ser o grau de liberdade,
   apesar do nome da variável.
@@ -120,7 +121,7 @@ Um integrador é simplético se também for um simplectomorfismo.
   t = /* Instante inicial, em geral 0.0 */;
   x[0] = /* Valor inicial da componente 0 */;
   /* ... */
-  x[pvi_dimentio-1] = /* Valor inicial da componente d-1 */;
+  x[pvi_dimensio-1] = /* Valor inicial da componente d-1 */;
   ```
 * Chame o integrador, como abaixo.
   ```c
@@ -140,7 +141,7 @@ Mudanças no caso simplético:
   static double f(size_t i, double *y){ /* ... */ }
   static double g(size_t i, double *x){ /* ... */ }
   ```
-* O valor de `pvi_dimentio` deve ser $d/2$ em vez de $d$.
+* O valor de `pvi_dimensio` deve ser $d/2$ em vez de $d$.
 * A chamada do integrador deve informar os nomes extras, como abaixo.
   ```c
   PVI_INTEGRATOR_EULER_S(t, x, y, f, g);
