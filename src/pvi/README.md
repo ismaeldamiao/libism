@@ -5,7 +5,7 @@
 oferece diversas rotinas implementadas na forma de macros para
 resolver numericamente o problema de valor inicial.
 
-Última modificação: 14 de março de 2024.
+Última modificação: 08 de abril de 2024.
 
 ```C
 #include "pvi.h"
@@ -152,7 +152,7 @@ Mudanças no caso simplético:
 ## Contato e doações
 
 Contribua para a manutenção dessa biblioteca
-relatando falhas, fazendo sugestões ou doando dinheiro.
+relatando falhas, fazendo sugestões ou fazendo uma doação.
 
 Autor: [I.F.F. dos Santos](https://github.com/ismaeldamiao)
 
