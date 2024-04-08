@@ -2,7 +2,7 @@
    Macro library to implement various methods to solve the
    initial value problem.
 
-   Last modified: March 14, 2024
+   Last modified: April 08, 2024
    *****************************************************************************
    E-mail: ismlxd@gmail.com
    Site: https://ismdamiao.github.io/
@@ -29,6 +29,10 @@
 ***************************************************************************** */
 #ifndef PVI_H
 #define PVI_H 1
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #if !defined(__STDC__)
 # error "Utilize um compilador compativel com o ISO C."
@@ -106,9 +110,12 @@ static double pvi_h = 0.1, pvi_finalis = 1.0;
 {\
    size_t pvi_index;\
    double pvi_h2, pvi_h6;\
+   double pvi__t_aux;\
    PVI_CORPUS \
       *pvi_inclinatio[4] = { NULL, NULL, NULL, NULL },\
       *pvi_Xaux[2] = {NULL, NULL};\
+\
+   (void)pvi__t_aux;\
 \
    pvi_inclinatio[0] = PVI_ALLOCARE();\
    pvi_inclinatio[1] = PVI_ALLOCARE();\
@@ -121,7 +128,6 @@ static double pvi_h = 0.1, pvi_finalis = 1.0;
    pvi_h6 = pvi_h / 6.0;\
 \
    while(t < pvi_finalis){\
-      double pvi__t_aux;\
 \
       for(pvi_index = (size_t)0; pvi_index < pvi_dimensio; ++pvi_index){\
          pvi_inclinatio[0][pvi_index] = X_punctum(pvi_index, t, X);\
@@ -1069,5 +1075,9 @@ static double pvi_h = 0.1, pvi_finalis = 1.0;
       PVI_FAC_ALIQUID();\
    }\
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* PVI_H */
