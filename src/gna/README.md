@@ -1,12 +1,13 @@
-# GNA
+# Generator Numerorum Aleatoriorum
 
-A biblioteca GNA
-oferece diversas funções para geração de números pseudo aleatórios.
+*Generator Numerorum Aleatoriorum*, ou simplesmente GNA,
+é uma biblioteca que oferece diversas funções
+para geração de números pseudo aleatórios.
 
-Última modificação: 14 de março de 2024.
+Última modificação: 8 de abril de 2024.
 
 ```C
-#include "rng.h"
+#include "gna.h"
 ```
 
 ## Exemplos
@@ -14,7 +15,7 @@ oferece diversas funções para geração de números pseudo aleatórios.
 ## Contato e doações
 
 Contribua para a manutenção dessa biblioteca
-relatando falhas, fazendo sugestões ou doando dinheiro.
+relatando falhas, fazendo sugestões ou fazendo uma doação.
 
 Autor: [I.F.F. dos Santos](https://github.com/ismaeldamiao)
 
