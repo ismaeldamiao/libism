@@ -41,6 +41,12 @@ Métodos simpléticos:
 - [x] Ruth de terceira ordem: `RUTH3`
 - [x] Ruth de quarta ordem: `RUTH4`
 
+## Instruções de uso
+
+Statistica é uma implementação do cabeçalho especificado
+em [05-pvi.md](../../spec/textual/05-pvi.md),
+a especificação deve ser consultada para maiores detalhes.
+
 ## Teoria
 
 O espaço de estados é um subconjunto aberto $\mathcal{V}\subseteq\mathbb{F}^d$,

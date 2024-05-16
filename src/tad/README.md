@@ -1,19 +1,27 @@
-# Generator Numerorum Aleatoriorum
+# Typus Abstractus Dati
 
-*Generator Numerorum Aleatoriorum*, ou simplesmente GNA,
-é uma biblioteca que oferece diversas funções
-para geração de números pseudo aleatórios.
+*Typus Abstractus Dati*, ou TAD,
+é uma biblioteca para manipulação de tipos abstratos de dados.
 
-Última modificação: 8 de abril de 2024.
+Implementação do capítulo 2 da especificação.
 
-```C
-#include "gna.h"
+Última alteração: 01 de maio de 2024.
+
+```c
+#include "tad.h
 ```
+
+## Estruturas suportadas
+
+- [x] Pilhas: `stiva_t`
+- [x] Filas: `fila_t`
+- [x] Listas: `index_t`
+- [x] Árvores: `arbor_t`
 
 ## Instruções de uso
 
-GNA é uma implementação do cabeçalho especificado
-em [03-gna.md](../../spec/textual/03-gna.md),
+TAD é uma implementação do cabeçalho especificado
+em [02-tad.md](../../spec/textual/02-tad.md),
 a especificação deve ser consultada para maiores detalhes.
 
 ## Contato e doações

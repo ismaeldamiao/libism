@@ -1,27 +1,21 @@
 #include <stdlib.h>
 #include <limits.h>
 
-#if defined(USE_STATIC)
-static
-#endif
 double gna_std(int *word)
+#define random_int (*(word))
 {
    static int start = 1;
-#define random_int (*(word))
    if((random_int < 0) || start){
       srand((unsigned)random_int);
       start = 0;
    }
    random_int = rand();
    return ((double)random_int / (double)RAND_MAX);
-#undef random_int
 }
+#undef random_int
 
 /* C89 implementation of LCG */
 
-#if defined(USE_STATIC)
-static
-#endif
 double gna_lcg(unsigned int *word)
 
 #if (UINT_MAX == 0xffff)

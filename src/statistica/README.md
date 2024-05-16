@@ -1,19 +1,19 @@
-# Generator Numerorum Aleatoriorum
+# Statistica
 
-*Generator Numerorum Aleatoriorum*, ou simplesmente GNA,
+*Statistica*
 é uma biblioteca que oferece diversas funções
-para geração de números pseudo aleatórios.
+para a análise de dados.
 
-Última modificação: 8 de abril de 2024.
+Última modificação: 16 de maio de 2024.
 
 ```C
-#include "gna.h"
+#include "statistica.h"
 ```
 
 ## Instruções de uso
 
-GNA é uma implementação do cabeçalho especificado
-em [03-gna.md](../../spec/textual/03-gna.md),
+Statistica é uma implementação do cabeçalho especificado
+em [04-statistica.md](../../spec/textual/04-statistica.md),
 a especificação deve ser consultada para maiores detalhes.
 
 ## Contato e doações
